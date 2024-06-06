@@ -32,6 +32,11 @@ public class MoviesMock {
         let data = try? Bundle.module.loadData(from: "popular_movie")
         return data
     }
+
+    static var mockMovieInfoData: Movie {
+        let movie: Movie? = try? Bundle.module.loadAndDecodeJSON(filename: "movie_info")
+        return movie!
+    }
 }
 
 // MARK: - Extension Bundle

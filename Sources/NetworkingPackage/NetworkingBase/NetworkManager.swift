@@ -12,13 +12,13 @@ import Foundation
 /// Example:
 /// * Fetch Trending Movies
 /// ```
-/// NetworkService.current.get.trendingMovies
+/// NetworkManager.shared.get.trendingMovies
 /// ```
-public class NetworkService: NetworkServiceProtocol {
+public class NetworkManager: NetworkManagerProtocol {
 
     // MARK: - Properties
 
-    public static let shared: NetworkService = NetworkService()
+    public static let shared: NetworkManager = NetworkManager()
     public let get: NetworkingGetRequestAPI
 
     // MARK: - Init

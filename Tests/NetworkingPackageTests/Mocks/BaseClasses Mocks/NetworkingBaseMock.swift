@@ -1,5 +1,5 @@
 //
-//  NetworkingBaseMock.swift
+//  NetworkManagerMock.swift
 //
 //
 //  Created by Sanket Sonje  on 03/06/24.
@@ -8,13 +8,13 @@
 import Foundation
 @testable import NetworkingPackage
 
-/// Mock for `NetworkingBase` class which provides api's to fetch, delete, update and post data using mock data
+/// Mock for `NetworkManager` class which provides api's to fetch, delete, update and post data using mock data
 /// Use `NetworkServiceMock.shared.get` to use this class in `Testing` environment only.
-class NetworkServiceMock: NetworkServiceProtocol {
+class NetworkManagerMock: NetworkManagerProtocol {
 
     // MARK: - Properties
 
-    static let shared = NetworkServiceMock()
+    static let shared = NetworkManagerMock()
     var get: NetworkingPackage.NetworkingGetRequestAPI
 
     // MARK: - Init

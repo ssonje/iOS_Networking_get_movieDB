@@ -14,7 +14,7 @@ class NetworkingGetTrendingMoviesAPITests: XCTestCase {
 
     // MARK: - Properties
 
-    let networkServiceMock = NetworkServiceMock.shared
+    let networkManagerMock = NetworkManagerMock.shared
     let trendingMoviesURL = NetworkingAPIConstants.baseURL.rawValue
         + NetworkingAPIConstants.trendingMovies.rawValue
         + NetworkingAPIConstants.apiKey.rawValue
@@ -41,7 +41,7 @@ class NetworkingGetTrendingMoviesAPITests: XCTestCase {
 
     func testGetTrendingMoviesAPI() throws {
         let expectation = XCTestExpectation(description: "Trending movies data fetching expectation.")
-        networkServiceMock.get.trendingMovies(completion: { (result: Result<TrendingMovies, Error>) in
+        networkManagerMock.get.trendingMovies(completion: { (result: Result<TrendingMovies, Error>) in
             switch result {
             case .success(let movies):
                 do {
